@@ -8,6 +8,26 @@ import { GameCarousel } from "@/components/game-carousel";
 import { Footer } from "@/components/footer";
 import Link from "next/link";
 
+const topGames = [
+  {
+    id: 1,
+    title: "Game 1",
+    image: "/games/game1.jpg",
+    betRange: "₹100 - ₹10,000"
+  },
+  // Add more games as needed
+]
+
+const newGames = [
+  {
+    id: 2,
+    title: "Game 2",
+    image: "/games/game2.jpg",
+    betRange: "₹200 - ₹20,000"
+  },
+  // Add more games as needed
+]
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#1C1C1E] text-white">
@@ -110,8 +130,8 @@ export default function Home() {
           </div>
 
           {/* Game Carousels */}
-          <GameCarousel title="Top" />
-          <GameCarousel title="New" />
+          <GameCarousel title="Top" games={topGames} />
+          <GameCarousel title="New" games={newGames} />
         </div>
       </main>
 
