@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { X } from "lucide-react"
 import Image from "next/image"
+import { Header } from "@/components/layout/header"
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
@@ -90,7 +91,7 @@ export default function LoginPage() {
             <label className="block text-sm">Phone number</label>
             <div className="flex gap-2">
               <Select value={countryCode} onValueChange={setCountryCode}>
-                <SelectTrigger className="w-[140px] bg-[#22262a] border-0">
+                <SelectTrigger className="w-[140px] bg-background border-input">
                   <SelectValue>
                     <div className="flex items-center gap-2">
                       <Image
@@ -103,9 +104,12 @@ export default function LoginPage() {
                     </div>
                   </SelectValue>
                 </SelectTrigger>
-                <SelectContent className="bg-[#22262a] border-[#1fad66]">
+                <SelectContent>
                   {countryCodes.map((country) => (
-                    <SelectItem key={country.code} value={country.code} className="text-white hover:bg-[#1fad66]/20">
+                    <SelectItem 
+                      key={country.code} 
+                      value={country.code}
+                    >
                       <div className="flex items-center gap-2">
                         <Image
                           src={`https://flagcdn.com/w20/${country.flag}.png`}
@@ -119,7 +123,11 @@ export default function LoginPage() {
                   ))}
                 </SelectContent>
               </Select>
-              <Input type="tel" className="flex-1 bg-[#22262a] border-0 text-white" placeholder="Enter phone number" />
+              <Input 
+                type="tel" 
+                className="flex-1" 
+                placeholder="Enter phone number" 
+              />
             </div>
           </div>
         )
@@ -127,86 +135,117 @@ export default function LoginPage() {
         return (
           <div className="space-y-2">
             <label className="block text-sm">Account number</label>
-            <Input type="text" className="w-full bg-[#22262a] border-0 text-white" placeholder="Enter account number" />
+            <Input 
+              type="text" 
+              className="w-full" 
+              placeholder="Enter account number" 
+            />
           </div>
         )
       case "E-MAIL":
         return (
           <div className="space-y-2">
             <label className="block text-sm">Email address</label>
-            <Input type="email" className="w-full bg-[#22262a] border-0 text-white" placeholder="Enter email address" />
+            <Input 
+              type="email" 
+              className="w-full" 
+              placeholder="Enter email address" 
+            />
           </div>
         )
     }
   }
 
   return (
-    <div className="min-h-screen bg-[#0b0d0e] text-white p-4 sm:p-6">
-      <div className="max-w-md mx-auto">
-        {/* Header */}
-        <div className="flex items-center mb-8">
-          <button className="p-2">
-            <X className="w-6 h-6" />
-          </button>
-          <h1 className="text-2xl font-medium ml-4">Log in</h1>
-        </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header />
 
-        {/* Tabs */}
-        <div className="flex gap-4 sm:gap-8 mb-8 text-[#abb2ba] overflow-x-auto">
-          {(["PHONE", "ACCOUNT NUMBER", "E-MAIL"] as const).map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`pb-2 whitespace-nowrap ${
-                activeTab === tab ? "border-b-2 border-[#1fad66] text-white" : "border-b-2 border-transparent"
-              }`}
+      <main className="pt-16">
+        <div className="max-w-md mx-auto p-4 sm:p-6">
+          {/* Header */}
+          <div className="flex items-center mb-8">
+            <Link href="/" className="p-2 hover:bg-accent rounded-full">
+              <X className="w-6 h-6" />
+            </Link>
+            <h1 className="text-2xl font-medium ml-4">Log in</h1>
+          </div>
+
+          {/* Tabs */}
+          <div className="flex gap-4 sm:gap-8 mb-8 text-muted-foreground overflow-x-auto">
+            {(["PHONE", "ACCOUNT NUMBER", "E-MAIL"] as const).map((tab) => (
+              <button
+                key={tab}
+                onClick={() => setActiveTab(tab)}
+                className={`pb-2 whitespace-nowrap ${
+                  activeTab === tab ? "border-b-2 border-primary text-foreground" : "border-b-2 border-transparent"
+                }`}
+              >
+                {tab}
+              </button>
+            ))}
+          </div>
+
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {renderLoginForm()}
+
+            <div className="space-y-2">
+              <label className="block text-sm">Password</label>
+              <Input 
+                type="password" 
+                className="w-full bg-card border-input" 
+                placeholder="Enter password" 
+              />
+            </div>
+
+            <div className="flex justify-end">
+              <Link 
+                href="/forgot-password" 
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Forgot your password?
+              </Link>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <Checkbox 
+                id="save-password" 
+                className="border-primary data-[state=checked]:bg-primary" 
+              />
+              <label htmlFor="save-password" className="text-sm">
+                Save password
+              </label>
+            </div>
+
+            <Button 
+              type="submit" 
+              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground h-12"
             >
-              {tab}
-            </button>
-          ))}
-        </div>
+              LOG IN
+            </Button>
 
-        {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-6">
-          {renderLoginForm()}
+            <div className="text-center">
+              <Link 
+                href="/signup" 
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                REGISTER
+              </Link>
+            </div>
+          </form>
 
-          <div className="space-y-2">
-            <label className="block text-sm">Password</label>
-            <Input type="password" className="w-full bg-[#22262a] border-0 text-white" placeholder="Enter password" />
-          </div>
-
-          <div className="flex justify-end">
-            <Link href="/forgot-password" className="text-sm text-[#abb2ba] hover:text-white transition-colors">
-              Forgot your password?
+          {/* Footer Links */}
+          <div className="mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
+            <span>Protected by reCAPTCHA</span>
+            <Link 
+              href="/terms" 
+              className="hover:text-foreground transition-colors"
+            >
+              Terms and Rules
             </Link>
           </div>
-
-          <div className="flex items-center gap-2">
-            <Checkbox id="save-password" className="border-[#1fad66] data-[state=checked]:bg-[#1fad66]" />
-            <label htmlFor="save-password" className="text-sm">
-              Save password
-            </label>
-          </div>
-
-          <Button type="submit" className="w-full bg-[#1fad66] hover:bg-[#1fad66]/90 text-white h-12">
-            LOG IN
-          </Button>
-
-          <div className="text-center">
-            <Link href="/register" className="text-[#abb2ba] hover:text-white transition-colors">
-              REGISTER
-            </Link>
-          </div>
-        </form>
-
-        {/* Footer */}
-        <div className="mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-[#abb2ba]">
-          <span>Protected by reCAPTCHA</span>
-          <Link href="/terms" className="hover:text-white transition-colors">
-            Terms and Rules
-          </Link>
         </div>
-      </div>
+      </main>
     </div>
   )
 }

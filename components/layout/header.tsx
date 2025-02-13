@@ -46,7 +46,16 @@ export function Header() {
             </Button>
 
             <Link href="/" className="mr-8">
-              <Image src="/leon-logo.svg" alt="LEON" width={100} height={32} priority />
+              <div className="flex items-center gap-2">
+                <Image 
+                  src="/logo.svg"
+                  alt="LEON"
+                  width={28} 
+                  height={28} 
+                  className="opacity-90" 
+                />
+                <span className="text-2xl font-bold text-foreground">LEON</span>
+              </div>
             </Link>
 
             <nav className="hidden lg:flex items-center space-x-6 flex-1">
@@ -85,11 +94,13 @@ export function Header() {
                   {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
                 </Button>
 
-                <Button variant="ghost" className="text-muted-foreground hover:text-foreground">
-                  LOG IN
-                </Button>
+                <Link href="/login">
+                  <Button variant="ghost">LOG IN</Button>
+                </Link>
 
-                <Button className="bg-[#1fad66] hover:bg-[#1fad66]/90 text-white">SIGN UP</Button>
+                <Link href="/signup">
+                  <Button>SIGN UP</Button>
+                </Link>
               </div>
             </div>
           </div>

@@ -5,29 +5,36 @@ import { Input } from "@/components/ui/input"
 
 export function BetSlip() {
   return (
-    <div className="bg-[#2A2A2E] rounded-lg sticky top-20">
-      <div className="p-4 border-b border-gray-800">
-        <h2 className="text-white font-medium flex items-center gap-2">
-          Bet slip <span className="bg-gray-700 text-xs px-2 py-0.5 rounded">0</span>
+    <div className="bg-card border rounded-lg shadow-md sticky top-20 max-h-[calc(100vh-6rem)] overflow-y-auto">
+      <div className="p-4 border-b sticky top-0 bg-card z-10">
+        <h2 className="text-foreground font-medium flex items-center gap-2">
+          Bet slip 
+          <span className="bg-muted text-xs px-2 py-0.5 rounded">0</span>
         </h2>
       </div>
 
       <div className="p-6">
         <div className="text-center mb-8">
-          <p className="text-gray-400 text-sm">Click on the odds to add selections to your bet slip</p>
+          <p className="text-muted-foreground text-sm">
+            Click on the odds to add selections to your bet slip
+          </p>
         </div>
 
         <div className="space-y-4">
           <div className="space-y-2">
-            <label className="block text-sm text-gray-400">Booking code</label>
+            <label className="block text-sm text-muted-foreground">
+              Booking code
+            </label>
             <Input
               type="text"
-              className="w-full bg-[#1C1C1E] border-0 text-white placeholder-gray-500"
+              className="w-full"
               placeholder="Enter code"
             />
           </div>
 
-          <Button className="w-full bg-[#1fad66] hover:bg-[#1fad66]/90">LOAD</Button>
+          <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">
+            LOAD
+          </Button>
         </div>
       </div>
     </div>

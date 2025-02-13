@@ -10,10 +10,10 @@ export default function SettingsPage() {
   const [showEmail, setShowEmail] = useState(false)
 
   return (
-    <div className="space-y-8">
+    <div className="p-6 space-y-8">
       {/* Header */}
       <div className="flex items-center gap-4">
-        <Link href="/profile" className="p-2">
+        <Link href="/profile" className="p-2 hover:bg-accent rounded-full">
           <ChevronLeft className="w-6 h-6" />
         </Link>
         <h1 className="text-2xl font-medium">SETTINGS</h1>
@@ -26,7 +26,6 @@ export default function SettingsPage() {
           <Button
             variant="secondary"
             size="sm"
-            className="bg-[#22262a] hover:bg-[#22262a]/80"
             onClick={() => setShowEmail(!showEmail)}
           >
             Show Current Email
@@ -34,11 +33,13 @@ export default function SettingsPage() {
         </div>
         <div className="space-y-2">
           <label className="block">
-            NEW EMAIL <span className="text-red-500">*</span>
+            NEW EMAIL <span className="text-destructive">*</span>
           </label>
           <div className="flex gap-2">
-            <Input type="email" className="flex-1 bg-[#22262a] border-0" />
-            <Button className="bg-[#1fad66] hover:bg-[#1fad66]/90 whitespace-nowrap">CHANGE EMAIL</Button>
+            <Input type="email" className="flex-1" />
+            <Button className="bg-primary hover:bg-primary/90 whitespace-nowrap">
+              CHANGE EMAIL
+            </Button>
           </div>
         </div>
       </div>
@@ -76,13 +77,15 @@ export default function SettingsPage() {
       <div className="space-y-4">
         <h2 className="text-xl">TWO-FACTOR AUTHENTICATION</h2>
         <div className="space-y-4">
-          <p className="text-[#abb2ba]">DISABLED</p>
-          <p className="text-sm text-[#abb2ba]">
+          <p className="text-muted-foreground">DISABLED</p>
+          <p className="text-sm text-muted-foreground">
             Using two-factor authentication is highly recommended because it protects your account with both your
             password and your phone.
           </p>
-          <p className="text-sm text-[#abb2ba]">While 2FA is enabled, you will not be able to login via Steam.</p>
-          <Button className="bg-[#1fad66] hover:bg-[#1fad66]/90">ENABLE 2FA</Button>
+          <p className="text-sm text-muted-foreground">
+            While 2FA is enabled, you will not be able to login via Steam.
+          </p>
+          <Button className="bg-primary hover:bg-primary/90">ENABLE 2FA</Button>
         </div>
       </div>
 

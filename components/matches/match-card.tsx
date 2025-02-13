@@ -2,21 +2,24 @@ interface MatchCardProps {
     homeTeam: {
       name: string
       logo: string
+      score?: string | number
     }
     awayTeam: {
       name: string
       logo: string
+      score?: string | number
     }
     odds: {
       home: number
-      draw: number
+      draw?: number
       away: number
     }
     time: string
+    isLive?: boolean
     matchId: string
   }
   
-  export function MatchCard({ homeTeam, awayTeam, odds, time, matchId }: MatchCardProps) {
+  export function MatchCard({ homeTeam, awayTeam, odds, time, isLive, matchId }: MatchCardProps) {
     return (
       <div className="bg-[hsl(var(--match-card-bg))] rounded-lg p-4 border border-[hsl(var(--border))] transition-colors duration-300">
         <div className="flex items-center justify-between mb-4">
