@@ -5,19 +5,19 @@
 4 silly config load:file:E:\sultan\project\.npmrc
 5 silly config load:file:C:\Users\saadr\.npmrc
 6 silly config load:file:C:\Users\saadr\AppData\Roaming\npm\etc\npmrc
-7 verbose title npm install @svgr/webpack
-8 verbose argv "install" "--save-dev" "@svgr/webpack"
-9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-12T18_21_08_826Z-
-10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-12T18_21_08_826Z-debug-0.log
+7 verbose title npm install country-flag-icons
+8 verbose argv "install" "country-flag-icons"
+9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T08_59_02_868Z-
+10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T08_59_02_868Z-debug-0.log
 11 silly packumentCache heap:4345298944 maxSize:1086324736 maxEntrySize:543162368
-12 silly logfile done cleaning log files
-13 warn idealTree Removing dependencies.@svgr/webpack in favor of devDependencies.@svgr/webpack
+12 silly logfile start cleaning logs, removing 2 files
+13 silly logfile done cleaning log files
 14 silly idealTree buildDeps
-15 silly fetch manifest @svgr/webpack@*
-16 silly packumentCache full:https://registry.npmjs.org/@svgr%2fwebpack cache-miss
-17 http fetch GET 200 https://registry.npmjs.org/@svgr%2fwebpack 251ms (cache hit)
-18 silly packumentCache full:https://registry.npmjs.org/@svgr%2fwebpack set size:155748 disposed:false
-19 silly placeDep ROOT @svgr/webpack@8.1.0 REPLACE for: nextjs@0.1.0 want: *
+15 silly fetch manifest country-flag-icons@*
+16 silly packumentCache full:https://registry.npmjs.org/country-flag-icons cache-miss
+17 http fetch GET 200 https://registry.npmjs.org/country-flag-icons 1830ms (cache miss)
+18 silly packumentCache full:https://registry.npmjs.org/country-flag-icons set size:undefined disposed:false
+19 silly placeDep ROOT country-flag-icons@1.5.16 OK for: nextjs@0.1.0 want: *
 20 silly reify moves {}
 21 silly audit bulk request {
 21 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
@@ -229,6 +229,7 @@
 21 silly audit   '@svgr/hast-util-to-babel-ast': [ '8.0.0' ],
 21 silly audit   '@svgr/plugin-jsx': [ '8.1.0' ],
 21 silly audit   '@svgr/plugin-svgo': [ '8.1.0' ],
+21 silly audit   '@svgr/webpack': [ '8.1.0' ],
 21 silly audit   '@swc/helpers': [ '0.5.2' ],
 21 silly audit   '@trysound/sax': [ '0.2.0' ],
 21 silly audit   '@types/d3-array': [ '3.2.1' ],
@@ -649,7 +650,7 @@
 21 silly audit   yallist: [ '3.1.1' ],
 21 silly audit   yaml: [ '2.5.1' ],
 21 silly audit   'yocto-queue': [ '0.1.0' ],
-21 silly audit   '@svgr/webpack': [ '8.1.0' ]
+21 silly audit   'country-flag-icons': [ '1.5.16' ]
 21 silly audit }
 22 verbose reify failed optional dependency E:\sultan\project\node_modules\fsevents
 23 silly reify mark deleted [ 'E:\\sultan\\project\\node_modules\\fsevents' ]
@@ -669,151 +670,154 @@
 37 silly reify mark deleted [ 'E:\\sultan\\project\\node_modules\\@next\\swc-darwin-x64' ]
 38 verbose reify failed optional dependency E:\sultan\project\node_modules\@next\swc-darwin-arm64
 39 silly reify mark deleted [ 'E:\\sultan\\project\\node_modules\\@next\\swc-darwin-arm64' ]
-40 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 1475ms
-41 silly audit report {
-41 silly audit report   'cross-spawn': [
-41 silly audit report     {
-41 silly audit report       id: 1100563,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-3xgq-45jj-v275',
-41 silly audit report       title: 'Regular Expression Denial of Service (ReDoS) in cross-spawn',
-41 silly audit report       severity: 'high',
-41 silly audit report       vulnerable_versions: '>=7.0.0 <7.0.5',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     }
-41 silly audit report   ],
-41 silly audit report   nanoid: [
-41 silly audit report     {
-41 silly audit report       id: 1101163,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-mwcw-c2x4-8c55',
-41 silly audit report       title: 'Predictable results in nanoid generation when given non-integer values',
-41 silly audit report       severity: 'moderate',
-41 silly audit report       vulnerable_versions: '<3.3.8',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     }
-41 silly audit report   ],
-41 silly audit report   next: [
-41 silly audit report     {
-41 silly audit report       id: 1099639,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-gp8f-8m3g-qvj9',
-41 silly audit report       title: 'Next.js Cache Poisoning',
-41 silly audit report       severity: 'high',
-41 silly audit report       vulnerable_versions: '>=13.5.1 <13.5.7',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     },
-41 silly audit report     {
-41 silly audit report       id: 1100421,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-g77x-44xx-532m',
-41 silly audit report       title: 'Denial of Service condition in Next.js image optimization',
-41 silly audit report       severity: 'moderate',
-41 silly audit report       vulnerable_versions: '>=10.0.0 <14.2.7',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     },
-41 silly audit report     {
-41 silly audit report       id: 1101380,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-7gfc-8cq8-jh5f',
-41 silly audit report       title: 'Next.js authorization bypass vulnerability',
-41 silly audit report       severity: 'high',
-41 silly audit report       vulnerable_versions: '>=9.5.5 <14.2.15',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     },
-41 silly audit report     {
-41 silly audit report       id: 1101439,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-7m27-7ghc-44w9',
-41 silly audit report       title: 'Next.js Allows a Denial of Service (DoS) with Server Actions',
-41 silly audit report       severity: 'moderate',
-41 silly audit report       vulnerable_versions: '>=13.0.0 <13.5.8',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     },
-41 silly audit report     {
-41 silly audit report       id: 1097295,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-fr5h-rqp8-mj6g',
-41 silly audit report       title: 'Next.js Server-Side Request Forgery in Server Actions',
-41 silly audit report       severity: 'high',
-41 silly audit report       vulnerable_versions: '>=13.4.0 <14.1.1',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     }
-41 silly audit report   ],
-41 silly audit report   postcss: [
-41 silly audit report     {
-41 silly audit report       id: 1094544,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-7fh5-64p2-3v2j',
-41 silly audit report       title: 'PostCSS line return parsing error',
-41 silly audit report       severity: 'moderate',
-41 silly audit report       vulnerable_versions: '<8.4.31',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     }
-41 silly audit report   ],
-41 silly audit report   zod: [
-41 silly audit report     {
-41 silly audit report       id: 1099462,
-41 silly audit report       url: 'https://github.com/advisories/GHSA-m95q-7qp3-xv42',
-41 silly audit report       title: 'Zod denial of service vulnerability',
-41 silly audit report       severity: 'moderate',
-41 silly audit report       vulnerable_versions: '<=3.22.2',
-41 silly audit report       cwe: [Array],
-41 silly audit report       cvss: [Object]
-41 silly audit report     }
-41 silly audit report   ]
-41 silly audit report }
-42 silly packumentCache corgi:https://registry.npmjs.org/cross-spawn cache-miss
-43 silly packumentCache corgi:https://registry.npmjs.org/nanoid cache-miss
-44 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
-45 silly packumentCache corgi:https://registry.npmjs.org/postcss cache-miss
-46 silly packumentCache corgi:https://registry.npmjs.org/zod cache-miss
-47 http fetch GET 200 https://registry.npmjs.org/cross-spawn 30ms (cache hit)
-48 silly packumentCache corgi:https://registry.npmjs.org/cross-spawn set size:44626 disposed:false
-49 http fetch GET 200 https://registry.npmjs.org/postcss 29ms (cache hit)
-50 silly packumentCache corgi:https://registry.npmjs.org/postcss set size:333766 disposed:false
-51 http fetch GET 200 https://registry.npmjs.org/zod 36ms (cache hit)
-52 silly packumentCache corgi:https://registry.npmjs.org/zod set size:661648 disposed:false
-53 http fetch GET 200 https://registry.npmjs.org/next 85ms (cache hit)
-54 silly packumentCache corgi:https://registry.npmjs.org/next set size:18757424 disposed:false
-55 http fetch GET 200 https://registry.npmjs.org/nanoid 507ms (cache hit)
-56 silly packumentCache corgi:https://registry.npmjs.org/nanoid set size:138004 disposed:false
-57 silly packumentCache corgi:https://registry.npmjs.org/eslint cache-miss
-58 silly packumentCache corgi:https://registry.npmjs.org/foreground-child cache-miss
-59 http fetch GET 200 https://registry.npmjs.org/foreground-child 11ms (cache hit)
-60 silly packumentCache corgi:https://registry.npmjs.org/foreground-child set size:20383 disposed:false
-61 http fetch GET 200 https://registry.npmjs.org/eslint 19ms (cache hit)
-62 silly packumentCache corgi:https://registry.npmjs.org/eslint set size:1031707 disposed:false
-63 silly packumentCache corgi:https://registry.npmjs.org/autoprefixer cache-miss
-64 silly packumentCache corgi:https://registry.npmjs.org/postcss-import cache-miss
-65 silly packumentCache corgi:https://registry.npmjs.org/postcss-js cache-miss
-66 silly packumentCache corgi:https://registry.npmjs.org/postcss-load-config cache-miss
-67 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested cache-miss
-68 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss cache-miss
-69 http fetch GET 200 https://registry.npmjs.org/postcss-js 67ms (cache hit)
-70 silly packumentCache corgi:https://registry.npmjs.org/postcss-js set size:20759 disposed:false
-71 http fetch GET 200 https://registry.npmjs.org/autoprefixer 76ms (cache hit)
-72 silly packumentCache corgi:https://registry.npmjs.org/autoprefixer set size:290367 disposed:false
-73 http fetch GET 200 https://registry.npmjs.org/postcss-load-config 79ms (cache hit)
-74 silly packumentCache corgi:https://registry.npmjs.org/postcss-load-config set size:37999 disposed:false
-75 http fetch GET 200 https://registry.npmjs.org/postcss-import 82ms (cache hit)
-76 silly packumentCache corgi:https://registry.npmjs.org/postcss-import set size:51326 disposed:false
-77 http fetch GET 200 https://registry.npmjs.org/postcss-nested 83ms (cache hit)
-78 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested set size:41645 disposed:false
-79 http fetch GET 200 https://registry.npmjs.org/tailwindcss 93ms (cache hit)
-80 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss set size:4058409 disposed:false
-81 silly ADD
-82 silly ADD
-83 silly ADD
+40 silly tarball no local data for country-flag-icons@https://registry.npmjs.org/country-flag-icons/-/country-flag-icons-1.5.16.tgz. Extracting by manifest.
+41 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 463ms
+42 silly audit report {
+42 silly audit report   'cross-spawn': [
+42 silly audit report     {
+42 silly audit report       id: 1100563,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-3xgq-45jj-v275',
+42 silly audit report       title: 'Regular Expression Denial of Service (ReDoS) in cross-spawn',
+42 silly audit report       severity: 'high',
+42 silly audit report       vulnerable_versions: '>=7.0.0 <7.0.5',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     }
+42 silly audit report   ],
+42 silly audit report   nanoid: [
+42 silly audit report     {
+42 silly audit report       id: 1101163,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-mwcw-c2x4-8c55',
+42 silly audit report       title: 'Predictable results in nanoid generation when given non-integer values',
+42 silly audit report       severity: 'moderate',
+42 silly audit report       vulnerable_versions: '<3.3.8',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     }
+42 silly audit report   ],
+42 silly audit report   next: [
+42 silly audit report     {
+42 silly audit report       id: 1099639,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-gp8f-8m3g-qvj9',
+42 silly audit report       title: 'Next.js Cache Poisoning',
+42 silly audit report       severity: 'high',
+42 silly audit report       vulnerable_versions: '>=13.5.1 <13.5.7',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     },
+42 silly audit report     {
+42 silly audit report       id: 1100421,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-g77x-44xx-532m',
+42 silly audit report       title: 'Denial of Service condition in Next.js image optimization',
+42 silly audit report       severity: 'moderate',
+42 silly audit report       vulnerable_versions: '>=10.0.0 <14.2.7',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     },
+42 silly audit report     {
+42 silly audit report       id: 1101380,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-7gfc-8cq8-jh5f',
+42 silly audit report       title: 'Next.js authorization bypass vulnerability',
+42 silly audit report       severity: 'high',
+42 silly audit report       vulnerable_versions: '>=9.5.5 <14.2.15',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     },
+42 silly audit report     {
+42 silly audit report       id: 1101439,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-7m27-7ghc-44w9',
+42 silly audit report       title: 'Next.js Allows a Denial of Service (DoS) with Server Actions',
+42 silly audit report       severity: 'moderate',
+42 silly audit report       vulnerable_versions: '>=13.0.0 <13.5.8',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     },
+42 silly audit report     {
+42 silly audit report       id: 1097295,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-fr5h-rqp8-mj6g',
+42 silly audit report       title: 'Next.js Server-Side Request Forgery in Server Actions',
+42 silly audit report       severity: 'high',
+42 silly audit report       vulnerable_versions: '>=13.4.0 <14.1.1',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     }
+42 silly audit report   ],
+42 silly audit report   postcss: [
+42 silly audit report     {
+42 silly audit report       id: 1094544,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-7fh5-64p2-3v2j',
+42 silly audit report       title: 'PostCSS line return parsing error',
+42 silly audit report       severity: 'moderate',
+42 silly audit report       vulnerable_versions: '<8.4.31',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     }
+42 silly audit report   ],
+42 silly audit report   zod: [
+42 silly audit report     {
+42 silly audit report       id: 1099462,
+42 silly audit report       url: 'https://github.com/advisories/GHSA-m95q-7qp3-xv42',
+42 silly audit report       title: 'Zod denial of service vulnerability',
+42 silly audit report       severity: 'moderate',
+42 silly audit report       vulnerable_versions: '<=3.22.2',
+42 silly audit report       cwe: [Array],
+42 silly audit report       cvss: [Object]
+42 silly audit report     }
+42 silly audit report   ]
+42 silly audit report }
+43 silly packumentCache corgi:https://registry.npmjs.org/cross-spawn cache-miss
+44 silly packumentCache corgi:https://registry.npmjs.org/nanoid cache-miss
+45 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+46 silly packumentCache corgi:https://registry.npmjs.org/postcss cache-miss
+47 silly packumentCache corgi:https://registry.npmjs.org/zod cache-miss
+48 http fetch GET 200 https://registry.npmjs.org/cross-spawn 155ms (cache updated)
+49 silly packumentCache corgi:https://registry.npmjs.org/cross-spawn set size:undefined disposed:false
+50 http fetch GET 200 https://registry.npmjs.org/nanoid 161ms (cache updated)
+51 silly packumentCache corgi:https://registry.npmjs.org/nanoid set size:undefined disposed:false
+52 http fetch GET 200 https://registry.npmjs.org/postcss 366ms (cache updated)
+53 silly packumentCache corgi:https://registry.npmjs.org/postcss set size:undefined disposed:false
+54 http fetch GET 200 https://registry.npmjs.org/zod 519ms (cache updated)
+55 silly packumentCache corgi:https://registry.npmjs.org/zod set size:undefined disposed:false
+56 http fetch GET 200 https://registry.npmjs.org/next 1175ms (cache updated)
+57 silly packumentCache corgi:https://registry.npmjs.org/next set size:undefined disposed:false
+58 silly packumentCache corgi:https://registry.npmjs.org/eslint cache-miss
+59 silly packumentCache corgi:https://registry.npmjs.org/foreground-child cache-miss
+60 http fetch GET 200 https://registry.npmjs.org/foreground-child 130ms (cache updated)
+61 silly packumentCache corgi:https://registry.npmjs.org/foreground-child set size:undefined disposed:false
+62 http fetch GET 200 https://registry.npmjs.org/eslint 142ms (cache updated)
+63 silly packumentCache corgi:https://registry.npmjs.org/eslint set size:undefined disposed:false
+64 silly packumentCache corgi:https://registry.npmjs.org/autoprefixer cache-miss
+65 silly packumentCache corgi:https://registry.npmjs.org/postcss-import cache-miss
+66 silly packumentCache corgi:https://registry.npmjs.org/postcss-js cache-miss
+67 silly packumentCache corgi:https://registry.npmjs.org/postcss-load-config cache-miss
+68 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested cache-miss
+69 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss cache-miss
+70 http fetch GET 200 https://registry.npmjs.org/autoprefixer 256ms (cache updated)
+71 silly packumentCache corgi:https://registry.npmjs.org/autoprefixer set size:undefined disposed:false
+72 http fetch GET 200 https://registry.npmjs.org/postcss-nested 417ms (cache updated)
+73 silly packumentCache corgi:https://registry.npmjs.org/postcss-nested set size:undefined disposed:false
+74 http fetch GET 200 https://registry.npmjs.org/postcss-import 424ms (cache updated)
+75 silly packumentCache corgi:https://registry.npmjs.org/postcss-import set size:undefined disposed:false
+76 http fetch GET 200 https://registry.npmjs.org/postcss-js 441ms (cache updated)
+77 silly packumentCache corgi:https://registry.npmjs.org/postcss-js set size:undefined disposed:false
+78 http fetch GET 200 https://registry.npmjs.org/postcss-load-config 753ms (cache updated)
+79 silly packumentCache corgi:https://registry.npmjs.org/postcss-load-config set size:undefined disposed:false
+80 http fetch GET 200 https://registry.npmjs.org/tailwindcss 978ms (cache updated)
+81 silly packumentCache corgi:https://registry.npmjs.org/tailwindcss set size:undefined disposed:false
+82 http fetch GET 200 https://registry.npmjs.org/country-flag-icons/-/country-flag-icons-1.5.16.tgz 8851ms (cache miss)
+83 silly ADD node_modules/country-flag-icons
 84 silly ADD
 85 silly ADD
 86 silly ADD
 87 silly ADD
 88 silly ADD
 89 silly ADD
-90 verbose cwd E:\sultan\project
-91 verbose os Windows_NT 10.0.22631
-92 verbose node v18.20.5
-93 verbose npm  v10.8.2
-94 verbose exit 0
-95 info ok
+90 silly ADD
+91 silly ADD
+92 silly ADD
+93 verbose cwd E:\sultan\project
+94 verbose os Windows_NT 10.0.22631
+95 verbose node v18.20.5
+96 verbose npm  v10.8.2
+97 verbose exit 0
+98 info ok

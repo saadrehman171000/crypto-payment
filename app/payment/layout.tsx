@@ -9,4 +9,3 @@ interface PaymentLayoutProps {
 export default function PaymentLayout({ children }: PaymentLayoutProps) {
   return <>{children}</>
 }
-

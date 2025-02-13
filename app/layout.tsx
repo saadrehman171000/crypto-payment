@@ -1,32 +1,31 @@
-import './globals.css';
-import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
-import { ThemeProvider } from "@/components/theme-provider";
+import type { Metadata } from "next"
+import { Inter } from 'next/font/google'
+import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider"
+import { Footer } from "@/components/footer"
 
-const inter = Inter({ subsets: ['latin'] });
+const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: 'Online Casino Games',
-  description: 'Play your favorite casino games online',
-};
+  title: "LEON - Sports Betting & Casino",
+  description: "Sports betting, live casino, and slots",
+}
 
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: Readonly<{
+  children: React.ReactNode
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
+      <body className={`${inter.className} bg-white dark:bg-[#1C1C1E]`}>
+        <ThemeProvider>
+          <main className="min-h-screen antialiased">
+            {children}
+            <Footer />
+          </main>
         </ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
