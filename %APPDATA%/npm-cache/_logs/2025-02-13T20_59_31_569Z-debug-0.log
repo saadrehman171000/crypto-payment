@@ -7,8 +7,8 @@
 6 silly config load:file:C:\Users\saadr\AppData\Roaming\npm\etc\npmrc
 7 verbose title npm config get registry
 8 verbose argv "config" "get" "registry"
-9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T09_41_51_515Z-
-10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T09_41_51_515Z-debug-0.log
+9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T20_59_31_569Z-
+10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T20_59_31_569Z-debug-0.log
 11 verbose cwd E:\sultan\project
 12 verbose os Windows_NT 10.0.22631
 13 verbose node v18.20.5

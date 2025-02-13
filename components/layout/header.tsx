@@ -14,7 +14,7 @@ const navItems = [
   { label: "LIVE", href: "/live" },
   { label: "SPORTS", href: "/sports" },
   { label: "SLOTS", href: "/slots" },
-  { label: "LIVE CASINO", href: "/live-casino" },
+  { label: "LIVE CASINO", href: "/casino" },
   { label: "BETGAMES", href: "/betgames" },
   { label: "V-SPORT", href: "/v-sport" },
   { label: "PROMOTIONS", href: "/promotions" },
