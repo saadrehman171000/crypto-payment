@@ -46,15 +46,15 @@ export function Header() {
             </Button>
 
             <Link href="/" className="mr-8">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-3">
                 <Image 
-                  src="/logo.svg"
-                  alt="LEON"
-                  width={28} 
-                  height={28} 
-                  className="opacity-90" 
+                  src="/myLogo.jpg"
+                  alt="SULTAN"
+                  width={40} 
+                  height={40} 
+                  className="opacity-100 rounded-md" 
                 />
-                <span className="text-2xl font-bold text-foreground">LEON</span>
+                <span className="text-2xl font-bold text-foreground tracking-wide">SULTAN</span>
               </div>
             </Link>
 
@@ -112,4 +112,3 @@ export function Header() {
     </>
   )
 }
-
