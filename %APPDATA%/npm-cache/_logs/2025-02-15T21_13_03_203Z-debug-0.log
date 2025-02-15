@@ -7,7 +7,7 @@
 6 silly config load:file:C:\Users\saadr\AppData\Roaming\npm\etc\npmrc
 7 verbose title npm run dev
 8 verbose argv "run" "dev"
-9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T16_25_47_680Z-
-10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-13T16_25_47_680Z-debug-0.log
+9 verbose logfile logs-max:10 dir:E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-15T21_13_03_203Z-
+10 verbose logfile E:\sultan\project\%APPDATA%\npm-cache\_logs\2025-02-15T21_13_03_203Z-debug-0.log
 11 silly logfile start cleaning logs, removing 2 files
 12 silly logfile done cleaning log files

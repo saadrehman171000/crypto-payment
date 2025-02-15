@@ -58,6 +58,7 @@ export function Header() {
               </div>
             </Link>
 
+            {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-6 flex-1">
               {navItems.map((item) => (
                 <Link
@@ -72,15 +73,16 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2 ml-auto">
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Search className="h-5 w-5" />
-              </Button>
+              {/* Desktop Buttons */}
+              <div className="hidden lg:flex items-center gap-2">
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
+                  <Search className="h-5 w-5" />
+                </Button>
 
-              <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
-                <Crown className="h-5 w-5 text-yellow-500" />
-              </Button>
+                <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
+                  <Crown className="h-5 w-5 text-yellow-500" />
+                </Button>
 
-              <div className="hidden lg:flex items-center gap-4">
                 <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
                   <GB className="h-5 w-5" />
                 </Button>
@@ -102,13 +104,129 @@ export function Header() {
                   <Button>SIGN UP</Button>
                 </Link>
               </div>
+
+              {/* Mobile Buttons */}
+              <div className="flex lg:hidden items-center gap-2">
+                <Link href="/login">
+                  <Button variant="ghost" size="sm">LOG IN</Button>
+                </Link>
+                <Link href="/signup">
+                  <Button size="sm">SIGN UP</Button>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Bar */}
+        <div className="lg:hidden border-t border-[hsl(var(--header-border))]">
+          <div className="container mx-auto px-4">
+            <div className="flex items-center h-12 overflow-x-auto no-scrollbar">
+              <div className="flex items-center space-x-6 pr-4">
+                <Link href="/" className="shrink-0 text-sm font-medium text-foreground whitespace-nowrap">
+                  TOP
+                </Link>
+                <Link href="/live" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  LIVE
+                </Link>
+                <Link href="/sports" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  SPORTS
+                </Link>
+                <Link href="/slots" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  SLOTS
+                </Link>
+                <Link href="/casino" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  CASINO
+                </Link>
+                <Link href="/betgames" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  BETGAMES
+                </Link>
+                <Link href="/v-sport" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  V-SPORT
+                </Link>
+                <Link href="/esports" className="shrink-0 text-sm font-medium text-muted-foreground whitespace-nowrap">
+                  ESPORTS
+                </Link>
+              </div>
+              <Button variant="ghost" size="icon" className="ml-auto shrink-0 text-muted-foreground">
+                <Search className="h-5 w-5" />
+              </Button>
             </div>
           </div>
         </div>
       </header>
 
       {/* Mobile Sidebar */}
-      <LeftSidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} className="lg:hidden" />
+      {isSidebarOpen && (
+        <div className="fixed inset-0 z-50 lg:hidden">
+          {/* Backdrop */}
+          <div 
+            className="fixed inset-0 bg-black/50" 
+            onClick={() => setIsSidebarOpen(false)}
+          />
+          
+          {/* Sidebar */}
+          <div className="fixed inset-y-0 left-0 w-[280px] bg-background p-6 shadow-xl">
+            <div className="flex flex-col h-full">
+              {/* Logo */}
+              <Link href="/" className="mb-8" onClick={() => setIsSidebarOpen(false)}>
+                <div className="flex items-center gap-3">
+                  <Image 
+                    src="/myLogo.jpg"
+                    alt="SULTAN"
+                    width={40} 
+                    height={40} 
+                    className="opacity-100 rounded-md" 
+                  />
+                  <span className="text-2xl font-bold text-foreground tracking-wide">SULTAN</span>
+                </div>
+              </Link>
+
+              {/* Navigation Items */}
+              <nav className="flex-1">
+                <div className="flex flex-col space-y-4">
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.label}
+                      href={item.href}
+                      className="flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors p-2 rounded-md hover:bg-accent"
+                      onClick={() => setIsSidebarOpen(false)}
+                    >
+                      {item.label}
+                      {item.icon && <item.icon className="h-4 w-4 text-yellow-500" />}
+                    </Link>
+                  ))}
+                </div>
+              </nav>
+
+              {/* Bottom Actions */}
+              <div className="mt-auto pt-6 space-y-4">
+                <div className="flex items-center justify-between">
+                  <Button
+                    variant="ghost"
+                    size="icon"
+                    className="text-muted-foreground hover:text-foreground"
+                    onClick={toggleTheme}
+                  >
+                    {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                  </Button>
+                  <Button variant="ghost" size="icon" className="text-muted-foreground hover:text-foreground">
+                    <GB className="h-5 w-5" />
+                  </Button>
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <Link href="/login" onClick={() => setIsSidebarOpen(false)}>
+                    <Button variant="ghost" className="w-full">LOG IN</Button>
+                  </Link>
+                  <Link href="/signup" onClick={() => setIsSidebarOpen(false)}>
+                    <Button className="w-full">SIGN UP</Button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }

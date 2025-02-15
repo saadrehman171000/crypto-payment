@@ -33,8 +33,7 @@ const sportIcons = [
         <path d="M14 7H21V14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    label: "Highest odds",
-    color: "text-red-500"
+    label: "Highest odds"
   },
   {
     icon: (
@@ -43,17 +42,40 @@ const sportIcons = [
         <path d="M7 12L10 15L17 8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    label: "Football",
-    color: "text-green-500"
+    label: "Football"
   },
-  { Icon: Snowflake, label: "Ice Hockey", color: "text-blue-500" },
-  { Icon: CircleDot, label: "Tennis", color: "text-yellow-500" },
-  { Icon: CircleDashed, label: "Basketball", color: "text-orange-500" },
-  { Icon: Gamepad2, label: "Esports", color: "text-pink-500" },
-  { Icon: Mountain, label: "Alpine Skiing", color: "text-cyan-500" },
-  { Icon: Flag, label: "American Football", color: "text-indigo-500" },
-  { Icon: Star, label: "Aussie Rules", color: "text-emerald-500" },
-  { Icon: BadgeCheck, label: "Badminton", color: "text-rose-500" },
+  { 
+    icon: <Snowflake className="w-6 h-6" />,
+    label: "Ice Hockey"
+  },
+  { 
+    icon: <CircleDot className="w-6 h-6" />,
+    label: "Tennis"
+  },
+  { 
+    icon: <CircleDashed className="w-6 h-6" />,
+    label: "Basketball"
+  },
+  { 
+    icon: <Gamepad2 className="w-6 h-6" />,
+    label: "Esports"
+  },
+  { 
+    icon: <Mountain className="w-6 h-6" />,
+    label: "Alpine Skiing"
+  },
+  { 
+    icon: <Flag className="w-6 h-6" />,
+    label: "American Football"
+  },
+  { 
+    icon: <Star className="w-6 h-6" />,
+    label: "Aussie Rules"
+  },
+  { 
+    icon: <BadgeCheck className="w-6 h-6" />,
+    label: "Badminton"
+  },
 ]
 
 const topLeagues = [

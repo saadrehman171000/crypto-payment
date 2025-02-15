@@ -7,7 +7,6 @@ import { X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
-import { Header } from "@/components/layout/header";
 
 // Country codes data
 const countryCodes = [
@@ -80,14 +79,21 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
-
-      <main className="pt-16">
+      <main className="min-h-screen">
         <div className="container mx-auto px-4 py-6">
           <div className="max-w-md mx-auto">
-            {/* Header with close button */}
+            {/* Header with close button and logo */}
             <div className="flex justify-between items-center mb-6">
-              <h1 className="text-xl font-semibold">Sign Up</h1>
+              <Link href="/" className="flex items-center gap-2">
+                <Image 
+                  src="/myLogo.jpg"
+                  alt="SULTAN"
+                  width={40} 
+                  height={40} 
+                  className="rounded-md" 
+                />
+                <span className="text-xl font-bold">SULTAN</span>
+              </Link>
               <Link href="/" className="hover:bg-accent rounded-full p-2">
                 <X className="w-6 h-6 text-muted-foreground hover:text-foreground" />
               </Link>

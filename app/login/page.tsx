@@ -4,7 +4,6 @@ import { useState } from "react"
 import Link from "next/link"
 import { X } from "lucide-react"
 import Image from "next/image"
-import { Header } from "@/components/layout/header"
 
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
@@ -158,7 +157,7 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Header />
+
 
       <main className="pt-16">
         <div className="max-w-md mx-auto p-4 sm:p-6">
@@ -234,19 +233,9 @@ export default function LoginPage() {
             </div>
           </form>
 
-          {/* Footer Links */}
-          <div className="mt-12 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-muted-foreground">
-            <span>Protected by reCAPTCHA</span>
-            <Link 
-              href="/terms" 
-              className="hover:text-foreground transition-colors"
-            >
-              Terms and Rules
-            </Link>
-          </div>
+
         </div>
       </main>
     </div>
   )
 }
-

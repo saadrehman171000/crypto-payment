@@ -70,7 +70,7 @@ export default function CasinoPage() {
   return (
     <>
       <Header />
-      <div className="pt-16">
+      <div className="pt-28 lg:pt-16">
         <div className="flex">
           {/* Mobile Sidebar Overlay */}
           {isSidebarOpen && (
@@ -110,21 +110,21 @@ export default function CasinoPage() {
           <main className="flex-1 lg:pl-64 w-full">
             <div className="container mx-auto p-4 space-y-6 md:space-y-8">
               {/* Winners Section */}
-              <section className="mt-4 md:mt-0">
+              <section className="relative z-10">
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl md:text-3xl font-bold">Top 100 Winners</h2>
                   <div className="flex items-center gap-2">
                     <Button 
                       variant="outline" 
                       size="icon" 
-                      className="bg-black hover:bg-black/90 rounded-lg"
+                      className="h-10 w-10 rounded-lg border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                     >
                       <ChevronLeft className="h-5 w-5" />
                     </Button>
                     <Button 
                       variant="outline" 
                       size="icon" 
-                      className="bg-black hover:bg-black/90 rounded-lg"
+                      className="h-10 w-10 rounded-lg border border-input bg-background hover:bg-accent hover:text-accent-foreground"
                     >
                       <ChevronRight className="h-5 w-5" />
                     </Button>
