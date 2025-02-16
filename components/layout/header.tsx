@@ -8,6 +8,9 @@ import { Search, Crown, Menu, Moon, Sun } from "lucide-react"
 import { GB } from "country-flag-icons/react/3x2"
 import { LeftSidebar } from "./left-sidebar"
 import { useTheme } from "@/components/theme-provider"
+import { Orbitron } from 'next/font/google'
+
+const orbitron = Orbitron({ subsets: ['latin'] })
 
 const navItems = [
   { label: "HOME", href: "/" },
@@ -45,16 +48,18 @@ export function Header() {
               <Menu className="h-6 w-6" />
             </Button>
 
-            <Link href="/" className="mr-8">
-              <div className="flex items-center gap-3">
-                <Image 
-                  src="/myLogo.jpg"
-                  alt="SULTAN"
-                  width={40} 
-                  height={40} 
-                  className="opacity-100 rounded-md" 
-                />
-                <span className="text-2xl font-bold text-foreground tracking-wide">SULTAN</span>
+            {/* Adjusted Logo Size */}
+            <Link href="/" className="mr-4 lg:mr-8 group">
+              <div className="flex items-center">
+                <div className={`text-xl lg:text-2xl font-black ${orbitron.className} tracking-wide`}>
+                  <span className="bg-gradient-to-r from-emerald-500 via-lime-500 to-amber-500 text-transparent bg-clip-text transition-all duration-300 group-hover:from-emerald-400 group-hover:to-amber-400">
+                    ALIBA
+                  </span>
+                  <span className="relative">
+                    <span className="text-foreground transition-colors duration-300">GAME</span>
+                    <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-emerald-500 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                  </span>
+                </div>
               </div>
             </Link>
 
@@ -165,20 +170,20 @@ export function Header() {
             onClick={() => setIsSidebarOpen(false)}
           />
           
-          {/* Sidebar */}
+          {/* Sidebar with Adjusted Logo */}
           <div className="fixed inset-y-0 left-0 w-[280px] bg-background p-6 shadow-xl">
             <div className="flex flex-col h-full">
-              {/* Logo */}
-              <Link href="/" className="mb-8" onClick={() => setIsSidebarOpen(false)}>
-                <div className="flex items-center gap-3">
-                  <Image 
-                    src="/myLogo.jpg"
-                    alt="SULTAN"
-                    width={40} 
-                    height={40} 
-                    className="opacity-100 rounded-md" 
-                  />
-                  <span className="text-2xl font-bold text-foreground tracking-wide">SULTAN</span>
+              <Link href="/" className="mb-8 group" onClick={() => setIsSidebarOpen(false)}>
+                <div className="flex items-center">
+                  <div className={`text-xl lg:text-2xl font-black ${orbitron.className} tracking-wide`}>
+                    <span className="bg-gradient-to-r from-emerald-500 via-lime-500 to-amber-500 text-transparent bg-clip-text transition-all duration-300 group-hover:from-emerald-400 group-hover:to-amber-400">
+                      ALIBA
+                    </span>
+                    <span className="relative">
+                      <span className="text-foreground transition-colors duration-300">GAME</span>
+                      <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-emerald-500 to-amber-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
+                    </span>
+                  </div>
                 </div>
               </Link>
 
